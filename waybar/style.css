@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     min-height: 0;
-    font-family: "Fira Mono";
+    font-family: "FiraMono Nerd Font";
     font-weight: 500;
     font-size: 16px;
     padding: 0;
@@ -76,15 +76,15 @@ tooltip {
 
 #cpu.critical,
 #memory.critical {
-    background-color: #ddc7a1;
-    border: 2px solid #c7ab7a;
+    /*background-color: #ddc7a1;
+    border: 2px solid #c7ab7a;*/
     color: #c14a4a;
 }
 
 #battery.warning,
 #battery.critical,
 #battery.urgent {
-    background-color: #ddc7a1;
-    border: 2px solid #c7ab7a;
+    /*background-color: #ddc7a1;
+    border: 2px solid #c7ab7a;*/
     color: #c14a4a;
 }
