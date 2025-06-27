@@ -46,7 +46,8 @@
     "interval": 2,
     "states": {
       "critical": 90
-    }
+    },
+    "on-click": "kitty -e btop"
   },
   "memory": {
     "format": "mem {avail:0.1f}g |",
