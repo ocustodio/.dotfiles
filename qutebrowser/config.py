@@ -9,10 +9,11 @@ config.load_autoconfig(False)  # load settings done via the gui
 c.auto_save.session = True  # save tabs on quit/restart
 
 # dark mode setup
-c.colors.webpage.darkmode.enabled = False
-c.colors.webpage.darkmode.algorithm = "lightness-cielab"
-c.colors.webpage.darkmode.policy.images = "never"
-config.set("colors.webpage.darkmode.enabled", False, "file://*")
+c.colors.webpage.preferred_color_scheme = "dark"
+# c.colors.webpage.darkmode.enabled = False
+# c.colors.webpage.darkmode.algorithm = "lightness-cielab"
+# c.colors.webpage.darkmode.policy.images = "never"
+# config.set("colors.webpage.darkmode.enabled", False, "file://*")
 
 # styles, cosmetics
 c.tabs.padding = {"top": 5, "bottom": 5, "left": 9, "right": 9}
@@ -46,11 +47,11 @@ config.bind("sH", "config-cycle statusbar.show always never")
 c.window.transparent = True
 
 # Set the tab bar background to transparent
-c.colors.tabs.bar.bg = "rgba(0, 0, 0, 0.4)"  # 50% transparent black
+c.colors.tabs.bar.bg = "rgba(0, 0, 0, 0.4)"
 
 # Set background for unselected even and odd tabs
-c.colors.tabs.even.bg = "rgba(0, 0, 0, 0.55)"  # 50% transparent black
-c.colors.tabs.odd.bg = "rgba(0, 0, 0, 0.55)"  # 50% transparent black
+c.colors.tabs.even.bg = "rgba(0, 0, 0, 0.7)"
+c.colors.tabs.odd.bg = "rgba(0, 0, 0, 0.55)"
 
 # Set background for selected even and odd tabs
 c.colors.tabs.selected.even.bg = "rgba(0, 0, 0, 0.85)"  # Slightly less transparent
@@ -63,19 +64,17 @@ c.colors.tabs.selected.even.fg = "white"  # Solid white for selected tabs
 c.colors.tabs.selected.odd.fg = "white"  # Solid white for selected tabs
 
 # Set the status bar background to semi-transparent
-c.colors.statusbar.normal.bg = "rgba(0, 0, 0, 0.6)"  # 50% transparent black
-c.colors.statusbar.insert.bg = (
-    "rgba(0, 0, 0, 0.6)"  # 50% transparent black in insert mode
-)
-c.colors.statusbar.command.bg = (
-    "rgba(0, 0, 0, 0.6)"  # 50% transparent black in command mode
-)
-c.colors.statusbar.passthrough.bg = (
-    "rgba(0, 0, 0, 0.6)"  # 50% transparent black in passthrough mode
-)
+c.colors.statusbar.normal.bg = "rgba(0, 0, 0, 0.6)"
+c.colors.statusbar.insert.bg = "rgba(0, 0, 0, 0.6)"
+c.colors.statusbar.command.bg = "rgba(0, 0, 0, 0.6)"
+c.colors.statusbar.passthrough.bg = "rgba(0, 0, 0, 0.6)"
 
 # Optional: Set foreground (text) colors for better visibility
 c.colors.statusbar.normal.fg = "rgba(255, 255, 255, 0.8)"  # Semi-transparent white
 c.colors.statusbar.insert.fg = "rgba(255, 255, 255, 0.8)"  # Semi-transparent white
 c.colors.statusbar.command.fg = "rgba(255, 255, 255, 0.8)"  # Semi-transparent white
 c.colors.statusbar.passthrough.fg = "rgba(255, 255, 255, 0.8)"  # Semi-transparent white
+
+c.url.default_page = "https://search.brave.com"
+c.url.start_pages = ["https://search.brave.com"]
+c.url.searchengines = {"DEFAULT": "https://search.brave.com/search?q={}"}
